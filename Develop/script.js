@@ -1,4 +1,10 @@
 // Assignment code here
+function generatePassword() {
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var number = "0123456789";
+  var symbol = "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
+};
 
 
 // Get references to the #generate element
@@ -8,7 +14,6 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
