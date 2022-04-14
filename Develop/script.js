@@ -9,15 +9,16 @@ function generatePassword() {
   // create the length of characters for password
   howManyCharacters = window.prompt("How many characters do you want in your password? Choose between 8-128 characters");
     if (howManyCharacters < 8 || howManyCharacters > 128) {
-      window.alert("You must choose between 8-128 characters!");
+      alert("You must choose between 8-128 characters!");
+      return howManyCharacters()
     }  
     if (howManyCharacters === "" || howManyCharacters === null) {
-      window.alert("Please enter a valid number.");
+      alert("Please enter a valid number.");
       // use return to call it again and stop the rest of this function from running
       return howManyCharacters()
     }
     else {
-      window.alert("Your password will be " + howManyCharacters + " characters long.");
+      alert("Your password will be " + howManyCharacters + " characters long.");
     }
     
 };    
