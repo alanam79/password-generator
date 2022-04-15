@@ -53,11 +53,6 @@ function generatePassword() {
       window.alert("Please select at least one lowercase, uppercase, number, and symbol to proceed.");
       return;
     }
-    
-    // var passwordChoosen = localStorage.getItem("passwordchoosen");
-    //   if (passwordChoosen === useLowerCase === true && useUpperCase === true && useNumber === trust && useNumber === true) {
-    //     localStorage.setItem("password", passwordChoosen);
-    //   }
 
     // group selected characters
   if (useLowerCase) {
@@ -81,6 +76,7 @@ function generatePassword() {
     finalPassword = finalPassword + special[rng];
   }
   return finalPassword;
+  
 };
 
 
