@@ -50,9 +50,14 @@ function generatePassword() {
       alert("Your password will not have a symbol.");
     }
     if (useLowerCase === false && useUpperCase === false && useNumber === false && useSymbol === false) {
-      window.alert("Please select at least one lowercase, uppercase, number, and symbol to proceed.");
+      window.alert("Please select at least one character.");
       return;
     }
+
+    //Set localStorage
+    //localStorage.setItem('password', writePassword()) 
+    //localStorage.getItem('password')
+
 
     // group selected characters
   if (useLowerCase) {
