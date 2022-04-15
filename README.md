@@ -1,6 +1,13 @@
 # Password Generator Starter Code
 
 # Purpose
+To randomly generate a password that meets the following criteria: 
+* Must click the generate password to begin
+* Must issue a series of prompts to assist with generating the password
+* Must have a lenght of 8 to 128 characters
+* Request if uppercase, lowercase, numbers, and/or special characters will be used
+* Require the information be validated and require at least one character type
+* Generate the password in the box or as an alert
 
 # Built With
 * HTML
@@ -11,6 +18,7 @@
 https://alanam79.github.io/password-generator/
 
 # GitHub
+https://github.com/alanam79/password-generator
 
 
 # Screenshots
@@ -27,3 +35,5 @@ https://alanam79.github.io/password-generator/
 ![image](https://user-images.githubusercontent.com/97997865/163635727-5d37e309-32e4-4f61-a862-762c0c8fcc9c.png)
 ![image](https://user-images.githubusercontent.com/97997865/163635742-42a53ce9-54af-445c-95f3-0abad4130d3b.png)
 
+# Contribution
+Made with ❤️ by Alana McKeel
