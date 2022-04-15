@@ -1,21 +1,22 @@
 // Assignment code here
 function generatePassword() {
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  var number = "0123456789";
-  var symbol = "!@#$%^&*()_+~\\`|}{[]:;?><,./-="
+  var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  var number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  var symbol = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
+  var special = [];
 
 
   // create the length of characters for password
   howManyCharacters = window.prompt("How many characters do you want in your password? Choose between 8-128 characters");
     if (howManyCharacters < 8 || howManyCharacters > 128) {
       alert("You must choose between 8-128 characters!");
-      return howManyCharacters();
+      return;
     }  
     if (howManyCharacters === "" || howManyCharacters === null) {
       alert("Please enter a valid number.");
       // use return to call it again and stop the rest of this function from running
-      return howManyCharacters();
+      return;
     }
     else {
       alert("Your password will be " + howManyCharacters + " characters long.");
@@ -50,10 +51,37 @@ function generatePassword() {
     }
     if (useLowerCase === false && useUpperCase === false && useNumber === false && useSymbol === false) {
       window.alert("Please select at least one lowercase, uppercase, number, and symbol to proceed.");
-    }  
-};    
+      return;
+    }
+    
+    // var passwordChoosen = localStorage.getItem("passwordchoosen");
+    //   if (passwordChoosen === useLowerCase === true && useUpperCase === true && useNumber === trust && useNumber === true) {
+    //     localStorage.setItem("password", passwordChoosen);
+    //   }
 
+    // group selected characters
+  if (useLowerCase) {
+    special = special.concat(lowerCase);
+  }
+  if (useUpperCase) {
+    special = special.concat(upperCase);
+  }
+  if (useNumber) {
+    special = special.concat(number);
+  }
+  if (useSymbol) {
+    special = special.concat(symbol);
+  }
 
+  // pick password
+  let finalPassword = ""
+  for (let i = 0; i < howManyCharacters; i++) {
+    let rng =[Math.floor(Math.random() * special.length)];
+    // or finalPassword += special[rng];
+    finalPassword = finalPassword + special[rng];
+  }
+  return finalPassword;
+};
 
 
 // Get references to the #generate element
