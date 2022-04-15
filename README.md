@@ -8,6 +8,7 @@
 * JAVASCRIPT
 
 # Website
+https://alanam79.github.io/password-generator/
 
 # GitHub
 
