@@ -15,7 +15,7 @@ To randomly generate a password that meets the following criteria:
 * JAVASCRIPT
 
 # Website
-https://alanam79.github.io/password-generator/
+
 
 # GitHub
 https://github.com/alanam79/password-generator
