@@ -18,7 +18,7 @@ To randomly generate a password that meets the following criteria:
 
 
 # GitHub
-https://github.com/alanam79/password-generator
+
 
 
 # Screenshots
