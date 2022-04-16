@@ -54,9 +54,6 @@ function generatePassword() {
       return;
     }
 
-    //Set localStorage
-    // localStorage.setItem('password', generatePassword())
-    // localStorage.getItem('password')
 
     // group selected characters
   if (useLowerCase) {
@@ -77,8 +74,10 @@ function generatePassword() {
   for (let i = 0; i < howManyCharacters; i++) {
     let rng =[Math.floor(Math.random() * special.length)];
     // or finalPassword += special[rng];
-    finalPassword = finalPassword + special[rng];
+    finalPassword += special[rng];
   }
+  localStorage.setItem('password', finalPassword)
+   localStorage.getItem('password')
   return finalPassword;  
 };
 
